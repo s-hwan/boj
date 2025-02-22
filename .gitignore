@@ -2,4 +2,6 @@
 *.exe
 CMakeLists.txt
 main.cpp
+/cmake-build-debug
+/.idea
 
