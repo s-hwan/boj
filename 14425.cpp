@@ -1,11 +1,12 @@
 #include <iostream>
 #include <unordered_set>
+#include <vector>
 using namespace std;
 
 int main() {
 
     unordered_set<string> s1;
-    unordered_set<string> s2;
+    vector<string> s2;
 
     int N,M;
 
@@ -19,13 +20,13 @@ int main() {
     for (int i = 0; i < M; i++) {
         string s;
         cin>>s;
-        s2.insert(s);
+        s2.push_back(s);
     }
     int count =0;
-    for (string target : s1) {
-        if (s2.find(target) != s2.end()) {count++;}
+    for (string target : s2) {
+        if (s1.find(target)!=s1.end()) {count++;}
     }
-    cout<<count<<endl;
+    cout<<count;
     return 0;
 
 }
